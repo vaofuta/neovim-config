@@ -63,5 +63,5 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 --controll backspace
-keymap("i", "<C-Backspace>", "<C-W>", opts)
+keymap("i", "<C-H>", "<ESC>dbxi", opts)
 
