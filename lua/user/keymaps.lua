@@ -5,7 +5,7 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap ; as leader key
+--Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -47,7 +47,6 @@ keymap("i", "cc", "<ESC>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
-
 -- Visual Block --
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
@@ -63,5 +62,9 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 --controll backspace
-keymap("i", "<C-H>", "<ESC>dbxi", opts)
+keymap("i", "<C-H>", '<C-w>', opts)
+--keymap("c", "<C-H>", '<C-w>', opts)
+
+--better dd
+keymap("n", "<dd>", '<"_dd>', opts)
 
